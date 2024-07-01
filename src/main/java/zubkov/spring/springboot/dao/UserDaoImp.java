@@ -19,11 +19,7 @@ public class UserDaoImp implements UserDao {
 
     @Override
     public void saveUser(User user) {
-        if (user.getId() == 0) {
-            entityManager.persist(user);
-        } else {
-            entityManager.merge(user);
-        }
+        entityManager.persist(user);
     }
 
     @Override

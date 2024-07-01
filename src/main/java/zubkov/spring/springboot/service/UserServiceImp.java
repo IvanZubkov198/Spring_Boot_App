@@ -46,6 +46,8 @@ public class UserServiceImp implements UserService {
     public void deleteUser(long id) {
         if (getUser(id) != null) {
             userDao.deleteUser(id);
+        } else {
+            System.out.println("User with id = " + id + " not found");
         }
     }
 }
